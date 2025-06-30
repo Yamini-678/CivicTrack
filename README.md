@@ -1,4 +1,5 @@
  // Features //
+ 
 🔍 Search Destinations by country with a responsive search bar
 
 📍 Map Integration to show exact location using Mapbox
@@ -17,6 +18,7 @@
 
 
 // 🛠️ Tech Stack //
+
 Frontend: EJS, HTML5, CSS3, Bootstrap
 
 Backend: Node.js, Express.js
