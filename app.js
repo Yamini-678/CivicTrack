@@ -50,10 +50,6 @@ const userRouter = require("./routes/user.js")
 
 const { applyTimestamps } = require("./models/review.js");
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/Wanderra";
-
-// const dbURL = process.env.ATLAS_URL;
-
 main().then(()=>{
     console.log("Connected to Database");
 }).catch((err)=>{
@@ -71,11 +67,7 @@ app.use(express.urlencoded({extended : true}));
 app.use(methodOverride('_method'));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "public"))); 
-
-
-// app.get("/" , (req,res)=>{
-//    res.send("Hi , Iam root");
-// });
+git
 
 app.use(session(sessionOptions));
 app.use(flash());
