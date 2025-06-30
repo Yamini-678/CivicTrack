@@ -1,4 +1,4 @@
-if(process.env.NODE.ENV !== "production"){
+if(process.env.NODE_ENV !== "production"){
     require('dotenv').config();
 }
 
@@ -26,7 +26,7 @@ const store = MongoStore.create({
     touchAfter : 24 * 3600,
 });
 
-store.on("error" , ()=>{
+store.on("error" , (err)=>{
     console.log("Error in Mongo-Session Store" , err);
 });
 
