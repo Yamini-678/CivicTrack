@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Chat</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #145214;
+      padding: 20px 30px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #00cc00;
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00e600;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Create a New Chat</h1>
+    <form action="/chats" method="POST">
+      <label>From:</label>
+      <input type="text" name="from" required>
+
+      <label>To:</label>
+      <input type="text" name="to" required>
+
+      <label>Message:</label>
+      <textarea name="msg" required></textarea>
+
+      <button type="submit">Send Chat</button>
+    </form>
+    <a href="/chats" class="back-link">⬅ Back to Chats</a>
+  </div>
+
+</body>
+</html>
+

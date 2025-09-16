@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Community Chats</title>
+  <style>
+    body { background: #111; color: white; font-family: Arial; }
+    .chat-card {
+      background: #145214; padding: 15px; border-radius: 12px; 
+      width: 300px; margin: 20px auto;
+    }
+    .chat-message { background: #00cc00; color: black; font-weight: bold; 
+      padding: 10px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1><a href="/listings">Community Chats</a></h1>
+  <a href="/chats/new">➕ New Chat</a>
+  
+  <% for(let chat of chats) { %>
+    <div class="chat-card">
+      <h3>From: <%= chat.from %></h3>
+      <div class="chat-message"><%= chat.msg %></div>
+      <p>To: <%= chat.to %></p>
+      <small><%= chat.createdAt.toLocaleString() %></small>
+      <br>
+      <a href="/chats/<%= chat._id %>/edit">✏️ Edit</a>
+      <form action="/chats/<%= chat._id %>/delete" method="POST" style="display:inline;">
+        <button type="submit">🗑️ Delete</button>
+      </form>
+    </div>
+  <% } %>
+</body>
+</html>

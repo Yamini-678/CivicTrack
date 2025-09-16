@@ -15,6 +15,8 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const chatRoutes = require("./routes/chat");
+
 
 
 const dbURL = "mongodb://127.0.0.1:27017/Wanderra";
@@ -90,6 +92,7 @@ app.use((req,res,next)=>{
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/",userRouter);
+app.use("/chats", chatRoutes);
 
 
 
