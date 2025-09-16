@@ -16,7 +16,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
-const dbURL = process.env.ATLAS_URL;
+
+const dbURL = "mongodb://127.0.0.1:27017/Wanderra";
 
 const store = MongoStore.create({
     mongoUrl : dbURL,
@@ -89,6 +90,9 @@ app.use((req,res,next)=>{
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/",userRouter);
+
+
+
 
 app.all("/", (req, res, next) => {
     next(new ExpressError(404,"Page Not Found"));

@@ -3,7 +3,7 @@
 <div class="container mt-4">
   <div class="row justify-content-center">
     <div class="col-lg-8 col-md-10 col-12">
-      <h3 class="mb-3 text-center">Edit Your Listing</h3>
+      <h3 class="mb-3 text-center">Edit Your Issue</h3>
 
       <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
@@ -28,19 +28,13 @@
           <input type="file" name="listing[image]" class="form-control">
         </div>
         
-        <div class="row">
-          <div class="mb-3 col-md-4">
-            <label for="price" class="form-label">Price</label>
-            <input value="<%=listing.price%>" type="number" name="listing[price]" class="form-control" required>
-            <div class="invalid-feedback">Price should be valid</div>
-          </div>
           
-          <div class="mb-3 col-md-8">
+        <div class="mb-3 col-md-8">
             <label for="country" class="form-label">Country</label>
             <input value="<%=listing.country%>" type="text" name="listing[country]" class="form-control" required>
             <div class="invalid-feedback">Country name should be valid</div>
-          </div>
         </div>
+        
 
         <div class="mb-3">
           <label for="location" class="form-label">Location</label>
@@ -48,7 +42,7 @@
           <div class="invalid-feedback">Location should be valid</div>
         </div>
 
-        <button class="btn btn-dark w-20 mt-3">Save Changes</button>
+        <button class="btn btn-success w-20 mt-3">Save Changes</button>
       </form>
     </div>
   </div>

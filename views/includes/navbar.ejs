@@ -1,12 +1,12 @@
 <style>
   .btn-search {
-    background-color: #fe424d;
+    background-color: #2f5133;
     color: #fff;
     border-radius: 25px;
     padding: 0 1rem;
   }
   .btn-search:hover {
-    background-color: #fe424d;
+    background-color: #2f5133;
     color: #fff;
   }
   .btn-search i {
@@ -30,7 +30,7 @@
 
   @media (max-width: 768px) {
     .navbar-collapse {
-      background-color: #f85863; 
+      background-color: #2f5133; 
       padding: 1rem;
       border-radius: 10px;
     }
@@ -48,7 +48,7 @@
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings">
-      <i class="fa-solid fa-compass"></i>
+      <i class="fa-solid fa-person"></i>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -57,12 +57,12 @@
 
      
       <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings"><h2>CivicTrack</h2></a>
       </div>
 
       
       <form class="d-flex mx-md-auto my-2 my-md-0" role="search">
-        <input class="form-control me-2 searchInput" type="search" name="country" placeholder="Search Destination" />
+        <input class="form-control me-2 searchInput" type="search" name="country" placeholder="Search Issue" />
         <button class="btn btn-search" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i> Search
         </button>
@@ -70,7 +70,8 @@
 
      
       <div class="navbar-nav ms-md-auto mt-2 mt-md-0">
-        <a class="nav-link" href="/listings/new">List your place</a>
+        <a class="nav-link" href="/listings/new">List your Issue</a>
+        <a class="nav-link" href="/chats">Community</a>
         <% if (!currUser) { %>
           <a class="nav-link" href="/signup"><b>Signup</b></a>
           <a class="nav-link" href="/login"><b>Login</b></a>

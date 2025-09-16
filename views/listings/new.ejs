@@ -3,7 +3,7 @@
 <div class="container my-4">
   <div class="row">
     <div class="col-12 col-md-8 offset-md-2">
-      <h3 class="mb-3">Create New Listing</h3>
+      <h3 class="mb-3">Add New Issue</h3>
       
       <form method="POST" 
             action="/listings" 
@@ -39,20 +39,12 @@
                  class="form-control" 
                  required>
           <div class="invalid-feedback">Please upload an image</div>
-        </div>
+
 
         
-        <div class="row">
-          <div class="col-12 col-md-4 mb-3">
-            <label for="price" class="form-label">Price</label>
-            <input name="listing[price]" 
-                   class="form-control" 
-                   placeholder="1500" 
-                   required>
-            <div class="invalid-feedback">Price should be valid</div>
-          </div>
+        
           
-          <div class="col-12 col-md-8 mb-3">
+          <div class="col-12 col-md-12 mb-3">
             <label for="country" class="form-label">Country</label>
             <input type="text" 
                    name="listing[country]" 
@@ -61,9 +53,9 @@
                    required>
             <div class="invalid-feedback">Country name should be valid</div>
           </div>
-        </div>
+  
         
-        <div class="mb-3">
+        <div class="col-12 col-md-12 mb-3">
           <label for="location" class="form-label">Location</label>
           <input type="text" 
                  name="listing[location]" 
@@ -75,7 +67,7 @@
         
       
         <div class="d-grid">
-          <button class="btn btn-dark button">ADD</button>
+          <button class="btn btn-success button">ADD</button>
         </div>
       </form>
     </div>

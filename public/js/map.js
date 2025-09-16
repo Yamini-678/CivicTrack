@@ -26,7 +26,15 @@ const marker = new mapboxgl.Marker({ color: "red" })
     .setLngLat(listing.geometry.coordinates)
     .setPopup(
       new mapboxgl.Popup({ offset: 25 }).setHTML(
-        `<h6>${listing.location}<br><br>Exact location provided after booking!</h6>`
+        `<h6>${listing.location}<br><br>Exact location provided after Login!</h6>`
       )
     )
     .addTo(map);
+
+function updateLocation(newListing) {
+    map.setCenter(newListing.geometry.coordinates); // update map center
+    marker.setLngLat(newListing.geometry.coordinates); // update marker position
+    marker.getPopup().setHTML(
+        `<h6>${newListing.location}<br><br>Exact location provided after Login!</h6>`
+    );
+}

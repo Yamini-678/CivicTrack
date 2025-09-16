@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #c8e3cc;
 }
 
 .container {
@@ -11,23 +12,24 @@ body {
 
 .navbar {
     height: 5rem;
-    background-color: white;
+    background-color: #618565;
 }
 
 
-.fa-compass {
-    color: #fe424d;
-    font-size: 2.5rem;
+.fa-person {
+    color: #efecec;
+    font-size: 4rem;
 }
 
 @media (min-width: 768px) {
     .fa-compass {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 
 .nav-link {
-    color: #222222 !important;
+    color: #f5f3f3 !important;
+    font-size: 3rem;
 }
 
 .f-info-links a {
@@ -104,7 +106,7 @@ body {
 
 .add-btn,
 .edit-btn {
-    background-color: #fe424d !important;
+    background-color: #2f5133 !important;
     border: none !important;
     color: white;
 }
@@ -161,3 +163,7 @@ body {
 .button{
     width:10vh;
 }
+
+
+
+
